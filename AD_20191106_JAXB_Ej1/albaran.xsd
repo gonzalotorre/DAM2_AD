@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+ <xsd:element name="pedido" type="PedidoType"/>
+
+ <xsd:element name="comentario" type="xsd:string"/>
+
+ <xsd:complexType name="PedidoType">
+  <xsd:sequence>
+   <xsd:element name="facturarA" type="Direccion"/>
+   <xsd:element ref="comentario" minOccurs="0"/>
+   <xsd:element name="articulos" type="Articulos"/>
+  </xsd:sequence>
+  <xsd:attribute name="fechaPedido" type="xsd:date"/>
+ </xsd:complexType>
+
+ <xsd:complexType name="Direccion">
+  <xsd:sequence>
+   <xsd:element name="nombre" type="xsd:string"/>
+   <xsd:element name="calle" type="xsd:string"/>
+   <xsd:element name="ciudad" type="xsd:string"/>
+   <xsd:element name="provincia" type="xsd:string"/>
+   <xsd:element name="codigoPostal" type="xsd:decimal"/>
+  </xsd:sequence>
+  <xsd:attribute name="pais" type="xsd:NMTOKEN" fixed="Espana"/>
+ </xsd:complexType>
+
+ <xsd:complexType name="Articulos">
+  <xsd:sequence>
+   <xsd:element name="articulo" minOccurs="1" maxOccurs="unbounded">
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="nombreProducto" type="xsd:string"/>
+      <xsd:element name="cantidad">
+       <xsd:simpleType>
+        <xsd:restriction base="xsd:positiveInteger">
+         <xsd:maxExclusive value="100"/>
+        </xsd:restriction>
+       </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="precio" type="xsd:decimal"/>
+      <xsd:element ref="comentario" minOccurs="0"/>
+      <xsd:element name="fechaEnvio" type="xsd:date" minOccurs="0"/>
+     </xsd:sequence>
+     <xsd:attribute name="codigo" type="PER" use="required"/>
+    </xsd:complexType>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+
+ <xsd:simpleType name="PER">
+  <xsd:restriction base="xsd:string">
+   <xsd:pattern value="\d{3}-[A-Z]{2}"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+</xsd:schema>

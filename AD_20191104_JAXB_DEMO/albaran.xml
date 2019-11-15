@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<pedido xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="albaran.xsd">
+<facturarA>
+	<nombre> El Corte Ingles </nombre>
+	<calle>Uria 2 </calle>
+	<ciudad> Oviedo</ciudad>
+	<provincia> Asturias </provincia>
+</facturarA>
+<comentario>Lineas de pedido</comentario>
+<articulos>
+<articulo codigo="123-AA">
+	<nombreProducto>Lampara</nombreProducto>
+	<cantidad>2</cantidad>
+	<precio>3.8</precio>
+	<comentario>Lámpara de pie rojo</comentario>
+	<fechaEnvio>2012-09-01</fechaEnvio>
+</articulo>
+<articulo codigo="443-CA">
+	<nombreProducto>Alfombra</nombreProducto>
+	<cantidad>5</cantidad>
+	<precio>30.5</precio>
+	<comentario>Alfombra 180 x 200</comentario>
+	<fechaEnvio>2012-09-25</fechaEnvio>
+</articulo>
+</articulos>
+</pedido>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/Users/gonza/Documents/ProyectosNetBeans/DAM2_AD/AD_20191106_JAXB/albaran.xsd" uri="xml-resources/jaxb/Albaran/albaran.xsd"/>
+    <system systemId="file:/C:/Users/gonza/Documents/ProyectosNetBeans/DAM2_AD/AD_20191106_JAXB_Ej1/albaran.xsd" uri="xml-resources/jaxb/BindingAlbaran/albaran.xsd"/>
+</catalog>

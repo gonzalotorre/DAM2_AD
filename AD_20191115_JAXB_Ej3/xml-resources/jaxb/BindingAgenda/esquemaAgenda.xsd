@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="agenda">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="alarmas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="alarma" type="alarmaType" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="correos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:sequence>
+								<xs:element name="correo" type="correoType"/>
+							</xs:sequence>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="contactos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="contacto" type="contactoType" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="contactoType">
+		<xs:sequence>
+			<xs:element name="nombre">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="idioma" use="required">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="ES"/>
+										<xs:enumeration value="EN"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="empresaSiNo" use="required">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="SI"/>
+										<xs:enumeration value="NO"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="telefono" maxOccurs="unbounded">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[0-9][0-9][0-9] [0-9][0-9][0-9] [0-9][0-9][0-9]"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="correoType">
+		<xs:sequence>
+			<xs:element name="remitente">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="destinatario" maxOccurs="unbounded">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="asunto">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="imagenes" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="extension" use="required">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="EntradaoSalida" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Salida"/>
+					<xs:enumeration value="Entrada"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="alarmaType">
+		<xs:sequence>
+			<xs:element name="diaHora">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="dia" type="diaType"/>
+						<xs:element name="hora" type="horaType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="asunto">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="prioridad" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="1"/>
+					<xs:enumeration value="2"/>
+					<xs:enumeration value="3"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="tono" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string"/>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="diaType">
+		<xs:sequence>
+			<xs:element name="dia" type="xs:int"/>
+			<xs:element name="mes" type="xs:int"/>
+			<xs:element name="año" type="xs:int"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="horaType">
+		<xs:sequence>
+			<xs:element name="hora" type="xs:int"/>
+			<xs:element name="minuto" type="xs:int"/>
+			<xs:element name="segundo" type="xs:decimal"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
