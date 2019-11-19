@@ -20,26 +20,27 @@ import jaxb.diccionario.PalabraType;
  */
 public interface InterfaceDiccionario {
 
-    /**
-     *
-     * @param ficheroXML
-     * @return
-     * @throws javax.xml.bind.JAXBException
-     */
     public JAXBElement unmarshalizable(File ficheroXML) throws JAXBException;
 
-    /**
-     *
-     * @param jaxbElement
-     * @throws javax.xml.bind.JAXBException
-     */
     public void marshalizar(JAXBElement jaxbElement) throws JAXBException;
 
+    //a) Contar el número de las definiciones de una determinada palabra
     public int numeroDefiniciones(DiccionarioEspanol diccionario, PalabraType palabra);
 
+    //a2) Contar el total de de definiciones de cada palabra.
+    
+    //b) Borrartodas las traducciones de un determinado idioma (ej. PT)y lo grabe en otro fichero
     public File borrarTraducciones(DiccionarioEspanol diccionario, String idioma) throws IOException;
 
+    //c) Generarun Map<K,V> donde K es el idioma de traducción y V es el total de traducciones que hay
     public Map<String, Integer> numeroTraduccionesIdioma(DiccionarioEspanol diccionario);
 
-    public ArrayList<String> sinonimos(DiccionarioEspanol diccionario, PalabraType palabra);
+    //d) Retornarpara una determinada palabra todos los sinónimos seguidos de sus definiciones
+    public Map<String,ArrayList<String>> sinonimosDefiniciones(DiccionarioEspanol diccionario, PalabraType palabra);
+    
+    //Añadir dos nuevas:
+    //e) Numero de traducciones de una determinada palabra
+    
+    //f) Para una determinada palabra, todas las definiciones seguidas de su traducción.
+    
 }

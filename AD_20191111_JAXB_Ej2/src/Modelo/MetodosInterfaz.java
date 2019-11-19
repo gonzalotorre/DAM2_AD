@@ -27,7 +27,7 @@ public interface MetodosInterfaz {
 
     public boolean anadirDireccion(Clientes cliente, TipoDireccion direccion, String nombre, String apellido1, String apellido2);
 
-    public boolean modificarDireccionCliente(Clientes cliente, TipoDireccion direccion, String nombre, String apellidos);
+    public boolean modificarDireccionCliente(Clientes cliente, TipoDireccion direccion, String nombre, String apellido1, String apellido2);
     
     public int borrarDirecciones(Clientes cliente);
     

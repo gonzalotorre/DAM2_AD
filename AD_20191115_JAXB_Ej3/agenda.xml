@@ -34,10 +34,10 @@
 	</alarmas>
 	<correos>
 		<correo EntradaoSalida="Entrada">
-			<remitente>String</remitente>
+			<remitente>Remitente</remitente>
 			<destinatario>String</destinatario>
 			<destinatario>String</destinatario>
-			<asunto>String</asunto>
+			<asunto>Asunto</asunto>
 			<imagenes extension="String">String</imagenes>
 			<imagenes extension="String">String</imagenes>
 		</correo>

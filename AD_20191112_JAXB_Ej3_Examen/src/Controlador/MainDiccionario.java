@@ -3,6 +3,7 @@ package Controlador;
 import Modelo.MetodosDiccionario;
 import java.io.File;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -26,22 +27,28 @@ public class MainDiccionario {
             MetodosDiccionario manejo = new MetodosDiccionario();
             File archivoXML = new File("diccionario.xml");
             JAXBElement jaxb = manejo.unmarshalizable(archivoXML);
-            manejo.marshalizar(jaxb);
-            //Creamos una fabrica de objetos para obtener el pedido y luego poder añadir un artículo
+            //Creamos una fabrica de objetos para obtener el diccionario
             ObjectFactory fabrica = new ObjectFactory();
-            //Creamos un pedidoType con los datos obtenidos de la fabrica
+            //Creamos un DiccionarioEspañol con los datos obtenidos de la fabrica
             DiccionarioEspanol diccionario = fabrica.createDiccionarioEspanol();
-            //Coge los valores que hay en el jaxb element y los mete al pedido
+            //Coge los valores que hay en el jaxb element y los mete al objeto diccionario, crea un diccionario
             diccionario = (DiccionarioEspanol) jaxb.getValue();
 
             PalabraType palabra = diccionario.getPalabra().get(0);
+            
             int numeroDefiniciones = manejo.numeroDefiniciones(diccionario, palabra);
             System.out.println("Numero definiciones: " + numeroDefiniciones);
             
             manejo.borrarTraducciones(diccionario, palabra.getTraducciones().getTraduccion().get(0).getIdiomaTraduccion());
-            Map<String, Integer> map = manejo.numeroTraduccionesIdioma(diccionario);
+            Map map = manejo.numeroTraduccionesIdioma(diccionario);
             
-            
+            Map m = manejo.sinonimosDefiniciones(diccionario, palabra);
+            System.out.println(m.size());
+            Collection c = m.values();
+            Object[] o = c.toArray();
+            System.out.println(o[0].toString()); //Muestra el sinónimo 1
+            System.out.println(o[1].toString()); //Muestra el sinónimo 2
+            System.out.println(o[2].toString()); //Muestra el sinónimo 3
             
             //manejo.marshalizar(jaxb);
         } catch (JAXBException ex) {

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <diccionarioEspanol xsi:noNamespaceSchemaLocation="diccionario.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<palabra>
-		<grafia>String</grafia>
+		<grafia>ALGO</grafia>
 		<fonetica>String</fonetica>
-		<definicion>String</definicion>
-		<definicion>String</definicion>
-		<definicion>String</definicion>
+		<definicion>definicion1</definicion>
+		<definicion>definicion2</definicion>
+		<definicion>definicion3</definicion>
 		<fechaInsercion>1967-08-13</fechaInsercion>
 		<traducciones>
 			<traduccion>
@@ -26,13 +26,13 @@
 		</traducciones>
 		<sinonimos>
 			<sinonimo>
-				<grafia>String</grafia>
+				<grafia>sinonimo1</grafia>
 			</sinonimo>
 			<sinonimo>
-				<grafia>String</grafia>
+				<grafia>sinonimo2</grafia>
 			</sinonimo>
 			<sinonimo>
-				<grafia>String</grafia>
+				<grafia>sinonimo3</grafia>
 			</sinonimo>
 		</sinonimos>
 	</palabra>
