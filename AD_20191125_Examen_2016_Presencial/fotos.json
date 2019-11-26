@@ -1,0 +1,154 @@
+{
+
+	"albumesFotos": {
+		"xsi:noNamespaceSchemaLocation": "fotos.xsd",
+		"xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+		"albumFotos": [
+			{
+				"titulo": "String1",
+				"autor": {
+					"nombre": "String",
+					"apellidos": [
+						"String", "String"
+					],
+					"telefono": [
+						"String", "String"
+					],
+					"email": "text"
+				},
+				"foto": [
+					{
+						"id": "ID_1",
+						"nombre": "String",
+						"titulo": "String",
+						"fechaCaptura": "1967-08-13",
+						"horaCaptura": "14:20:00.0Z",
+						"camara": "String",
+						"ISO": 800,
+						"tiempoExposicion": 0.125,
+						"datos": "String",
+						"favorito": true
+					}, {
+						"id": "ID_2",
+						"nombre": "String",
+						"titulo": "String",
+						"fechaCaptura": "1968-08-13",
+						"horaCaptura": "14:20:00.0Z",
+						"camara": "String",
+						"ISO": 800,
+						"tiempoExposicion": 0.125,
+						"datos": "String",
+						"favorito": true
+					}, {
+						"id": "ID_3",
+						"nombre": "String",
+						"titulo": "String",
+						"fechaCaptura": "1969-08-13",
+						"horaCaptura": "14:20:00.0Z",
+						"camara": "String",
+						"ISO": 800,
+						"tiempoExposicion": 0.125,
+						"datos": "String",
+						"favorito": true
+					}
+				]
+			}, {
+				"titulo": "String2",
+				"autor": {
+					"nombre": "String",
+					"apellidos": [
+						"String", "String"
+					],
+					"telefono": [
+						"String", "String"
+					],
+					"email": "text"
+				},
+				"foto": [
+					{
+						"id": "ID_4",
+						"nombre": "String",
+						"titulo": "String",
+						"fechaCaptura": "1967-08-13",
+						"horaCaptura": "14:20:00.0Z",
+						"camara": "String",
+						"ISO": 200,
+						"tiempoExposicion": 0.125,
+						"datos": "String",
+						"favorito": true
+					}, {
+						"id": "ID_5",
+						"nombre": "String",
+						"titulo": "String",
+						"fechaCaptura": "1967-08-13",
+						"horaCaptura": "14:20:00.0Z",
+						"camara": "String",
+						"ISO": 400,
+						"tiempoExposicion": 0.125,
+						"datos": "String",
+						"favorito": true
+					}, {
+						"id": "ID_6",
+						"nombre": "String",
+						"titulo": "String",
+						"fechaCaptura": "1967-08-13",
+						"horaCaptura": "14:20:00.0Z",
+						"camara": "String",
+						"ISO": 800,
+						"tiempoExposicion": 0.125,
+						"datos": "String",
+						"favorito": true
+					}
+				]
+			}, {
+				"titulo": "String3",
+				"autor": {
+					"nombre": "String",
+					"apellidos": [
+						"String", "String"
+					],
+					"telefono": [
+						"String", "String"
+					],
+					"email": "text"
+				},
+				"foto": [
+					{
+						"id": "ID_7",
+						"nombre": "String",
+						"titulo": "String",
+						"fechaCaptura": "1967-08-13",
+						"horaCaptura": "14:20:00.0Z",
+						"camara": "String",
+						"ISO": 400,
+						"tiempoExposicion": 0.125,
+						"datos": "String",
+						"favorito": true
+					}, {
+						"id": "ID_8",
+						"nombre": "String",
+						"titulo": "String",
+						"fechaCaptura": "1967-08-13",
+						"horaCaptura": "14:20:00.0Z",
+						"camara": "String",
+						"ISO": 400,
+						"tiempoExposicion": 0.125,
+						"datos": "String",
+						"favorito": true
+					}, {
+						"id": "ID_9",
+						"nombre": "String",
+						"titulo": "String",
+						"fechaCaptura": "1967-08-13",
+						"horaCaptura": "14:20:00.0Z",
+						"camara": "String",
+						"ISO": 400,
+						"tiempoExposicion": 0.125,
+						"datos": "String",
+						"favorito": true
+					}
+				]
+			}
+		]
+	}
+}

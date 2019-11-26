@@ -1,0 +1,58 @@
+[
+	{
+		"clientes":	[{
+			"cliente":	[{
+				"apellido":"torre",
+				"direcciones":	[{
+					"direccion":	[{
+						"calle":"calle1",
+						"numero":"numero1",
+						"piso":1,
+						"escalera":"a",
+						"cp":33930,
+						"ciudad":"Asturias"
+					}]
+				},
+				{
+					"direccion":	[{
+						"calle":"calle2",
+						"numero":"numero2",
+						"piso":2,
+						"escalera":"b",
+						"cp":33935,
+						"ciudad":"Asturias"
+					}]
+				}],
+				"telefono":648876541,
+				"nombre":""
+			}]
+		},
+		{
+			"cliente":	[{
+				"apellido":"Fernández",
+				"direcciones":	[{
+					"direccion":	[{
+						"calle":"calle1",
+						"numero":"numero1",
+						"piso":1,
+						"escalera":"a",
+						"cp":33930,
+						"ciudad":"Asturias"
+					}]
+				},
+				{
+					"direccion":	[{
+						"calle":"calle2",
+						"numero":"numero2",
+						"piso":2,
+						"escalera":"b",
+						"cp":33935,
+						"ciudad":"Asturias"
+					}]
+				}],
+				"telefono":648876541,
+				"nombre":""
+			}]
+		}]
+	}
+]

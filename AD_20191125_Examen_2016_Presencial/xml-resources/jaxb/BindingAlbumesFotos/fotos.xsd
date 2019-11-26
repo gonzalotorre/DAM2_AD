@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 sp1 (http://www.altova.com) by End User (free.org) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="autorType">
+		<xs:sequence>
+			<xs:element name="nombre" type="xs:string"/>
+			<xs:element name="apellidos" type="xs:string" maxOccurs="2"/>
+			<xs:element name="telefono" maxOccurs="2">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="email" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fotoType">
+		<xs:sequence>
+			<xs:element name="nombre" type="xs:string"/>
+			<xs:element name="titulo" type="xs:string"/>
+			<xs:element name="fechaCaptura" type="xs:date"/>
+			<xs:element name="horaCaptura" type="xs:time"/>
+			<xs:element name="camara" type="xs:string"/>
+			<xs:element name="ISO">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="1600"/>
+						<xs:enumeration value="800"/>
+						<xs:enumeration value="400"/>
+						<xs:enumeration value="200"/>
+						<xs:enumeration value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="tiempoExposicion" type="xs:float"/>
+			<xs:element name="datos" type="xs:string"/>
+			<xs:element name="favorito">
+				<xs:simpleType>
+					<xs:restriction base="xs:boolean"/>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:ID"/>
+	</xs:complexType>
+	<xs:element name="albumesFotos">
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="albumFotos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="titulo" type="xs:string"/>
+							<xs:element name="autor" type="autorType"/>
+							<xs:element name="foto" type="fotoType" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

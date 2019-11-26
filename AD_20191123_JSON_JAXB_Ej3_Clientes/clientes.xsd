@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+       <xs:element name="clientes">
+              <xs:complexType>
+                     <xs:sequence>
+                            <xs:element name="cliente" maxOccurs="unbounded">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="apellido" type="tipoApellido" minOccurs="1" maxOccurs ="2"/>  
+                                                 <xs:element name="direccion" type="tipoDireccion" minOccurs="1" maxOccurs="3"/>
+                                                 <xs:element name="telefono">
+                                                        <xs:simpleType>
+                                                               <xs:restriction base="xs:string">
+                                                                      <xs:maxLength value="20"/>
+                                                               </xs:restriction>
+                                                        </xs:simpleType>
+                                                 </xs:element>
+                                                 <xs:element name="nombre">
+                                                        <xs:complexType>
+                                                               <xs:attribute name="lenguaje"/>
+                                                        </xs:complexType>
+                                                 </xs:element>
+                                          </xs:sequence>
+                                   </xs:complexType>
+                            </xs:element>
+                     </xs:sequence>
+              </xs:complexType>
+       </xs:element>
+
+     <!-- Definicion del tipo datos -->       
+       <xs:complexType name="tipoDireccion">
+              <xs:sequence>
+                     <xs:element name="calle">
+                            <xs:simpleType>
+                                   <xs:restriction base="xs:string">
+                                          <xs:maxLength value="30"/>
+                                   </xs:restriction>
+                            </xs:simpleType>
+                     </xs:element>
+                     <xs:element name="numero">
+                            <xs:simpleType>
+                                   <xs:restriction base="xs:string">
+                                          <xs:maxLength value="30"/>
+                                   </xs:restriction>
+                            </xs:simpleType>
+                     </xs:element>
+                     <xs:element name="piso">
+                            <xs:simpleType>
+                                   <xs:restriction base="xs:int"/>
+                            </xs:simpleType>
+                     </xs:element>
+                     <xs:element name="escalera">
+                            <xs:simpleType>
+                                   <xs:restriction base="xs:string">
+                                          <xs:enumeration value="a"/>
+                                          <xs:enumeration value="b"/>
+                                          <xs:enumeration value="c"/>
+                                   </xs:restriction>
+                            </xs:simpleType>
+                     </xs:element>
+                     <xs:element name="cp">
+                            <xs:simpleType>
+                                   <xs:restriction base="xs:int">
+                                          <xs:totalDigits value="5"/>
+                                   </xs:restriction>
+                            </xs:simpleType>
+                     </xs:element>
+                     <xs:element name="ciudad">
+                            <xs:simpleType>
+                                   <xs:restriction base="xs:string">
+                                          <xs:maxLength value="30"/>
+                                   </xs:restriction>
+                            </xs:simpleType>
+                     </xs:element>
+              </xs:sequence>
+       </xs:complexType>
+       
+<xs:simpleType name="tipoApellido">
+              <xs:restriction base="xs:string">
+                     <xs:maxLength value="20"/>
+              </xs:restriction>
+       </xs:simpleType>
+</xs:schema>

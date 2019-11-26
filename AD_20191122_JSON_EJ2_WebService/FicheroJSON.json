@@ -1,0 +1,18 @@
+[
+	{
+		"results":	[{
+			"elevation":1608.637939453125,
+			"location":	[{
+				"lat":39.7391536,
+				"lng":-104.9847034
+			}],
+			"resolution":4.771975994110107
+		}],
+		"status":"OK"
+	},
+	{
+		"error_message":"Invalidrequest. Invalid 'locations' parameter.",
+		"results":[{}],
+		"status":"REQUEST_DENIED"
+	}
+]

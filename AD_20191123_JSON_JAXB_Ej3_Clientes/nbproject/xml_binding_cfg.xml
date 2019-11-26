@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<schemas xmlns='http://xml.netbeans.org/schema/JAXBWizConfig' destdir='build/generated-sources/jaxb' projectName='AD_20191123_JSON_JAXB_Ej3_Clientes' version='1.0'>
+	<schema type='-xmlschema' package='jaxb.clientes' name='BindingClientes'>
+		<xjc-options>
+		</xjc-options>
+		<schema-sources>
+			<schema-source location='xml-resources/jaxb/BindingClientes/clientes.xsd' origLocation='clientes.xsd'/>
+		</schema-sources>
+		<bindings>
+		</bindings>
+		<catalog/>
+	</schema>
+</schemas>
