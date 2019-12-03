@@ -1,0 +1,15 @@
+{
+	"Socios":	{
+		"Socio":	[
+			{
+			"nombreSocio":"String","apellidos":["String","String"],"telefono":0
+			},
+			{
+			"nombreSocio":"String","apellidos":["String","String"],"telefono":0
+			},
+			{
+			"nombreSocio":"String","apellidos":["String","String"],"telefono":0
+			}
+		]
+	}
+}

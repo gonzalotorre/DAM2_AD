@@ -1,0 +1,37 @@
+[
+	{
+		"titulo":"Sueños IA",
+		"totalPaginas":210,
+		"precio":10,
+		"autores":	[{
+				"nombre":"Javier",
+				"apellido":"Perez"
+			},
+			{
+				"nombre":"María",
+				"apellido":"Rodriduez"
+			}],
+		"generos":	[{
+				"genero":"novela"
+			}, {
+				"genero":"ficción"
+			}]
+	},
+	{
+		"titulo":"Json para todos",
+		"totalPaginas":310,
+		"precio":20,
+		"autores":	[{
+				"nombre":"Ana",
+				"apellido":"Cota"
+			},	{
+				"nombre":"Mar",
+				"apellido":"Fernández"
+			}],	
+		"generos":	[{
+				"genero":"informática"
+			},	{
+				"genero":"JSON"
+			}]
+	}
+]

@@ -1,0 +1,59 @@
+[
+	{
+		"nombre":"nombre1",
+		"apellido":	[
+			"String",
+			"String"
+		],
+		"listaPrestamos":	{
+			"prestamo":	[
+			{
+				"titulo":"String1.1"
+			},
+			{
+				"titulo":"String1.2"
+			},
+			{
+				"titulo":"String1.3"
+			}
+		]}
+	},
+	{
+		"nombre":"nombre2",
+		"apellido":	[
+			"String",
+			"String"
+		],
+		"listaPrestamos":	{
+			"prestamo":	[
+			{
+				"titulo":"String2.1"
+			},
+			{
+				"titulo":"String2.2"
+			},
+			{
+				"titulo":"String2.3"
+			}
+		]}
+	},
+	{
+		"nombre":"nombre3",
+		"apellido":	[
+			"String",
+			"String"
+		],
+		"listaPrestamos":	{
+			"prestamo":	[
+			{
+				"titulo":"String3.1"
+			},
+			{
+				"titulo":"String3.2"
+			},
+			{
+				"titulo":"String3.3"
+			}
+		]}
+	}
+]

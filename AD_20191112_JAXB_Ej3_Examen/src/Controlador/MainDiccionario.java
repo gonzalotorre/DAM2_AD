@@ -43,7 +43,8 @@ public class MainDiccionario {
             Map map = manejo.numeroTraduccionesIdioma(diccionario);
             
             Map m = manejo.sinonimosDefiniciones(diccionario, palabra);
-            System.out.println(m.size());
+            System.out.println(m);
+            
             Collection c = m.values();
             Object[] o = c.toArray();
             System.out.println(o[0].toString()); //Muestra el sinónimo 1

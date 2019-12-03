@@ -1,0 +1,123 @@
+{
+	"XML": {
+		"version": 1.0,
+		"encoding": "UTF-8"
+	},
+	"diccionarioEspanol": {
+		"xsi:noNamespaceSchemaLocation": "diccionario.xsd",
+		"xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+		"palabras": {
+			"palabra": [
+				{
+					"grafia": "String1",
+					"definiciones": {
+						"definicion": [
+							"String", "String", "String"
+						]
+					},
+					"fechaInsercion": "2019-11-25",
+					"sinonimos": {
+						"sinonimo": [
+							{
+								"grafia": "String",
+								"porcentajeSimilitud": 3.14159
+							}, {
+								"grafia": "String",
+								"porcentajeSimilitud": 3.14159
+							}, {
+								"grafia": "String",
+								"porcentajeSimilitud": 3.14159
+							}
+						]
+					},
+					"antonimos": {
+						"antonimo": [
+							{
+								"grafia": "String",
+								"porcentajeOposicion": 3.14159
+							}, {
+								"grafia": "String",
+								"porcentajeOposicion": 3.14159
+							}, {
+								"grafia": "String",
+								"porcentajeOposicion": 3.14159
+							}
+						]
+					}
+				}, {
+					"grafia": "String2",
+					"definiciones": {
+						"definicion": [
+							"String", "String", "String"
+						]
+					},
+					"fechaInsercion": "2019-11-25",
+					"sinonimos": {
+						"sinonimo": [
+							{
+								"grafia": "String",
+								"porcentajeSimilitud": 3.14159
+							}, {
+								"grafia": "String",
+								"porcentajeSimilitud": 3.14159
+							}, {
+								"grafia": "String",
+								"porcentajeSimilitud": 3.14159
+							}
+						]
+					},
+					"antonimos": {
+						"antonimo": [
+							{
+								"grafia": "String",
+								"porcentajeOposicion": 3.14159
+							}, {
+								"grafia": "String",
+								"porcentajeOposicion": 3.14159
+							}, {
+								"grafia": "String",
+								"porcentajeOposicion": 3.14159
+							}
+						]
+					}
+				}, {
+					"grafia": "String3",
+					"definiciones": {
+						"definicion": [
+							"String", "String", "String"
+						]
+					},
+					"fechaInsercion": "1967-08-13",
+					"sinonimos": {
+						"sinonimo": [
+							{
+								"grafia": "String",
+								"porcentajeSimilitud": 3.14159
+							}, {
+								"grafia": "String",
+								"porcentajeSimilitud": 3.14159
+							}, {
+								"grafia": "String",
+								"porcentajeSimilitud": 3.14159
+							}
+						]
+					},
+					"antonimos": {
+						"antonimo": [
+							{
+								"grafia": "String",
+								"porcentajeOposicion": 3.14159
+							}, {
+								"grafia": "String",
+								"porcentajeOposicion": 3.14159
+							}, {
+								"grafia": "String",
+								"porcentajeOposicion": 3.14159
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+}

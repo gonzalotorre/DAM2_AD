@@ -1,0 +1,9 @@
+{
+	"biblioteca":	{
+		"libros":	[
+			{"ISBN":"String","titulo":"String","autor":"String","numeroPagias":0,"fechaPublicacion":"1967-08-13","prestadoSiNo":"No","fechaDevolucion":"1967-08-13"},
+			{"ISBN":"String","titulo":"String","autor":"String","numeroPagias":0,"fechaPublicacion":"1967-08-13","prestadoSiNo":"Si","fechaDevolucion":"1967-08-13"},
+			{"ISBN":"String","titulo":"String","autor":"String","numeroPagias":0,"fechaPublicacion":"1967-08-13","prestadoSiNo":"No","fechaDevolucion":"1967-08-13"}
+		]
+	}
+}

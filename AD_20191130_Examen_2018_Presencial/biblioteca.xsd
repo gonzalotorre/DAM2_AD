@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 sp1 (http://www.altova.com) by End User (free.org) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="biblioteca">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="libros">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element name="libro" type="libroType"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="socios">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element name="socio" type="socioType"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="prestamos">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element name="prestamo" type="prestamoType"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="libroType">
+		<xs:sequence>
+			<xs:element name="ISBN" type="xs:string"/>
+			<xs:element name="titulo" type="xs:string"/>
+			<xs:element name="autor" type="xs:string"/>
+			<xs:element name="numeroPaginas" type="xs:integer"/>
+			<xs:element name="fechaPublicacion" type="xs:date"/>
+			<xs:element name="prestadoSiNo">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="No"/>
+						<xs:enumeration value="Si"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fechaDevolucion">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:date"/>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="socioType">
+		<xs:sequence>
+			<xs:element name="codigoSocio" type="xs:string"/>
+			<xs:element name="nombreSocio" type="xs:string"/>
+			<xs:element name="apellidoSocio" type="xs:string" maxOccurs="2"/>
+			<xs:element name="telefono" type="xs:integer"/>
+			<xs:element name="librosPrestados">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="prestamo" type="prestamoType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="prestamoType">
+		<xs:sequence>
+			<xs:element name="ISBN" type="xs:string"/>
+			<xs:element name="titulo" type="xs:string"/>
+			<xs:element name="codigoSocio" type="xs:string"/>
+			<xs:element name="nombreSocio" type="xs:string"/>
+			<xs:element name="apellidoSocio" type="xs:string"/>
+			<xs:element name="fechaDevolucion" type="xs:date"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

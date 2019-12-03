@@ -1,0 +1,169 @@
+{
+	"XML": {
+		"version": 1.0,
+		"encoding": "UTF-8"
+	},
+	"biblioteca": {
+		"xsi:noNamespaceSchemaLocation": "biblioteca.xsd",
+		"xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+		"libros": {
+			"libro": [
+				{
+					"ISBN": "String",
+					"titulo": "String",
+					"autor": "String",
+					"numeroPaginas": 0,
+					"fechaPublicacion": "1967-08-13",
+					"prestadoSiNo": "No",
+					"fechaDevolucion": "1967-08-13"
+				}, {
+					"ISBN": "String",
+					"titulo": "String",
+					"autor": "String",
+					"numeroPaginas": 0,
+					"fechaPublicacion": "1967-08-13",
+					"prestadoSiNo": "Si",
+					"fechaDevolucion": "1967-08-13"
+				}, {
+					"ISBN": "String",
+					"titulo": "String",
+					"autor": "String",
+					"numeroPaginas": 0,
+					"fechaPublicacion": "1967-08-13",
+					"prestadoSiNo": "No",
+					"fechaDevolucion": "1967-08-13"
+				}
+			]
+		},
+		"socios": {
+			"socio": [
+				{
+					"codigoSocio": "String",
+					"nombreSocio": "String",
+					"apellidoSocio": [
+						"String", "String"
+					],
+					"telefono": 0,
+					"librosPrestados": {
+						"prestamo": [
+							{
+								"ISBN": "String",
+								"titulo": "String",
+								"codigoSocio": "String",
+								"nombreSocio": "String",
+								"apellidoSocio": "String",
+								"fechaDevolucion": "1967-08-13"
+							}, {
+								"ISBN": "String",
+								"titulo": "String",
+								"codigoSocio": "String",
+								"nombreSocio": "String",
+								"apellidoSocio": "String",
+								"fechaDevolucion": "1967-08-13"
+							}, {
+								"ISBN": "String",
+								"titulo": "String",
+								"codigoSocio": "String",
+								"nombreSocio": "String",
+								"apellidoSocio": "String",
+								"fechaDevolucion": "1967-08-13"
+							}
+						]
+					}
+				}, {
+					"codigoSocio": "String",
+					"nombreSocio": "String",
+					"apellidoSocio": [
+						"String", "String"
+					],
+					"telefono": 0,
+					"librosPrestados": {
+						"prestamo": [
+							{
+								"ISBN": "String",
+								"titulo": "String",
+								"codigoSocio": "String",
+								"nombreSocio": "String",
+								"apellidoSocio": "String",
+								"fechaDevolucion": "1967-08-13"
+							}, {
+								"ISBN": "String",
+								"titulo": "String",
+								"codigoSocio": "String",
+								"nombreSocio": "String",
+								"apellidoSocio": "String",
+								"fechaDevolucion": "1967-08-13"
+							}, {
+								"ISBN": "String",
+								"titulo": "String",
+								"codigoSocio": "String",
+								"nombreSocio": "String",
+								"apellidoSocio": "String",
+								"fechaDevolucion": "1967-08-13"
+							}
+						]
+					}
+				}, {
+					"codigoSocio": "String",
+					"nombreSocio": "String",
+					"apellidoSocio": [
+						"String", "String"
+					],
+					"telefono": 0,
+					"librosPrestados": {
+						"prestamo": [
+							{
+								"ISBN": "String",
+								"titulo": "String",
+								"codigoSocio": "String",
+								"nombreSocio": "String",
+								"apellidoSocio": "String",
+								"fechaDevolucion": "1967-08-13"
+							}, {
+								"ISBN": "String",
+								"titulo": "String",
+								"codigoSocio": "String",
+								"nombreSocio": "String",
+								"apellidoSocio": "String",
+								"fechaDevolucion": "1967-08-13"
+							}, {
+								"ISBN": "String",
+								"titulo": "String",
+								"codigoSocio": "String",
+								"nombreSocio": "String",
+								"apellidoSocio": "String",
+								"fechaDevolucion": "1967-08-13"
+							}
+						]
+					}
+				}
+			]
+		},
+		"prestamos": {
+			"prestamo": [
+				{
+					"ISBN": "String",
+					"titulo": "String",
+					"codigoSocio": "String",
+					"nombreSocio": "String",
+					"apellidoSocio": "String",
+					"fechaDevolucion": "1967-08-13"
+				}, {
+					"ISBN": "String",
+					"titulo": "String",
+					"codigoSocio": "String",
+					"nombreSocio": "String",
+					"apellidoSocio": "String",
+					"fechaDevolucion": "1967-08-13"
+				}, {
+					"ISBN": "String",
+					"titulo": "String",
+					"codigoSocio": "String",
+					"nombreSocio": "String",
+					"apellidoSocio": "String",
+					"fechaDevolucion": "1967-08-13"
+				}
+			]
+		}
+	}
+}

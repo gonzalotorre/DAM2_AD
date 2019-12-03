@@ -46,13 +46,15 @@ public class MetodosAlbumFotosJSON {
      * @param iso para saber el numero de fotos con esa ISO.
      * @return el numero de fotos con la misma ISO introducida por parámetro.
      */
-    public static int totalFotosISO(JsonObject listaAlbum, String iso) {
+    public static int totalFotosISO(JsonObject listaAlbum, int iso) {
         JsonObject albumesFotos = listaAlbum.getJsonObject("albumesFotos");
         JsonArray albumFotos = albumesFotos.getJsonArray("albumFotos");
         int contadorFotos = 0;
         for (int i = 0; i < albumFotos.size(); i++) {
             for (int j = 0; j < albumFotos.getJsonObject(i).getJsonArray("foto").size(); j++) {
-                contadorFotos++;
+                if (albumFotos.getJsonObject(i).getJsonArray("foto").getJsonObject(j).getInt("ISO") == iso) {
+                    contadorFotos++;
+                }
             }
         }
         return contadorFotos;

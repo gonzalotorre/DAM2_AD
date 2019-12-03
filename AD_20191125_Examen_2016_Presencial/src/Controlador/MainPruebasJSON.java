@@ -21,7 +21,7 @@ public class MainPruebasJSON {
     public static void main(String[] args) {
         try {
             JsonObject albumFotos = MetodosAlbumFotosJSON.leerFichero("fotos.json");
-            int numFotos = MetodosAlbumFotosJSON.totalFotosISO(albumFotos, "800");
+            int numFotos = MetodosAlbumFotosJSON.totalFotosISO(albumFotos, 800);
             System.out.println("Para la ISO 800 hay un total de: " + numFotos + " fotos");
             Map<String, Integer> totalFotos = MetodosAlbumFotosJSON.totalFotosAlbum(albumFotos);
             System.out.println("Total de fotos en cada album: " + totalFotos);

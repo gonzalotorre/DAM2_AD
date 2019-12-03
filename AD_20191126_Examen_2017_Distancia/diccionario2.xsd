@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 sp1 (http://www.altova.com) by End User (free.org) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="diccionarioEspanol">
+		<xs:complexType>
+			<xs:sequence maxOccurs="1">
+				<xs:element name="palabras">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element name="palabra" type="palabraType"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="palabraType">
+		<xs:sequence>
+			<xs:element name="grafia" type="xs:string"/>
+			<xs:element name="definiciones">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="definicion" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="fechaInsercion" type="xs:date"/>
+			<xs:element name="sinonimos">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="sinonimo" type="sinonimoType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="antonimos">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="antonimo" type="antonimoType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="traduccionType">
+		<xs:sequence>
+			<xs:element name="idiomaTraduccion" type="xs:string"/>
+			<xs:element name="grafia" type="xs:string"/>
+			<xs:element name="fonetica" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sinonimoType">
+		<xs:sequence>
+			<xs:element name="grafia" type="xs:string"/>
+			<xs:element name="porcentajeSimilitud" type="xs:float"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="definicion"/>
+	<xs:complexType name="antonimoType">
+		<xs:sequence>
+			<xs:element name="grafia" type="xs:string"/>
+			<xs:element name="porcentajeOposicion" type="xs:float"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

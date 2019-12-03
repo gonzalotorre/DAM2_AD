@@ -181,7 +181,7 @@ public class JSONMetodosCliente {
         List<Clientes.Cliente> ListaCliente = crearClientes(clientes);
         Clientes clientesJAXB = new ObjectFactory().createClientes(ListaCliente);
         File ficheroXML = marshalizar(clientesJAXB, "jaxb.clientes");
-        return null;
+        return ficheroXML;
     }
 
     //----------------------------------Otros---------------------------------//

@@ -1,0 +1,118 @@
+{
+	"XML": {
+		"version": 1.0,
+		"encoding": "UTF-8"
+	},
+	"diccionarioEspanol": {
+		"xsi:noNamespaceSchemaLocation": "diccionario.xsd",
+		"xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+		"palabra": [
+			{
+				"grafia": "String1",
+				"fonetica": "String",
+				"definicion": [
+					"String", "String", "String"
+				],
+				"fechaInsercion": "2019-12-01",
+				"traducciones": {
+					"traduccion": [
+						{
+							"idiomaTraduccion": "IdiomaString1",
+							"grafia": "String",
+							"fonetica": "String"
+						}, {
+							"idiomaTraduccion": "IdiomaString2",
+							"grafia": "String",
+							"fonetica": "String"
+						}, {
+							"idiomaTraduccion": "IdiomaString3",
+							"grafia": "String",
+							"fonetica": "String"
+						}
+					]
+				},
+				"sinonimos": {
+					"sinonimo": [
+						{
+							"grafia": "String"
+						}, {
+							"grafia": "String"
+						}, {
+							"grafia": "String"
+						}
+					]
+				}
+			}, {
+				"grafia": "String2",
+				"fonetica": "String",
+				"definicion": [
+					"String", "String", "String"
+				],
+				"fechaInsercion": "2019-12-02",
+				"traducciones": {
+					"traduccion": [
+						{
+							"idiomaTraduccion": "IdiomaString2",
+							"grafia": "String",
+							"fonetica": "String"
+						}, {
+							"idiomaTraduccion": "String",
+							"grafia": "String",
+							"fonetica": "String"
+						}, {
+							"idiomaTraduccion": "String",
+							"grafia": "String",
+							"fonetica": "String"
+						}
+					]
+				},
+				"sinonimos": {
+					"sinonimo": [
+						{
+							"grafia": "String"
+						}, {
+							"grafia": "String"
+						}, {
+							"grafia": "String"
+						}
+					]
+				}
+			}, {
+				"grafia": "String3",
+				"fonetica": "String",
+				"definicion": [
+					"String", "String", "String"
+				],
+				"fechaInsercion": "1967-08-13",
+				"traducciones": {
+					"traduccion": [
+						{
+							"idiomaTraduccion": "IdiomaString3",
+							"grafia": "String",
+							"fonetica": "String"
+						}, {
+							"idiomaTraduccion": "String",
+							"grafia": "String",
+							"fonetica": "String"
+						}, {
+							"idiomaTraduccion": "String",
+							"grafia": "String",
+							"fonetica": "String"
+						}
+					]
+				},
+				"sinonimos": {
+					"sinonimo": [
+						{
+							"grafia": "String"
+						}, {
+							"grafia": "String"
+						}, {
+							"grafia": "String"
+						}
+					]
+				}
+			}
+		]
+	}
+}

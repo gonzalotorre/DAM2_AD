@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<schemas xmlns='http://xml.netbeans.org/schema/JAXBWizConfig' destdir='build/generated-sources/jaxb' projectName='AD_20191126_Examen_2017_Distancia' version='1.0'>
+	<schema type='-xmlschema' package='jaxb.diccionario2' name='BindingDiccionario2'>
+		<xjc-options>
+		</xjc-options>
+		<schema-sources>
+			<schema-source location='xml-resources/jaxb/BindingDiccionario2/diccionario2.xsd' origLocation='diccionario2.xsd'/>
+		</schema-sources>
+		<bindings>
+		</bindings>
+		<catalog/>
+	</schema>
+</schemas>

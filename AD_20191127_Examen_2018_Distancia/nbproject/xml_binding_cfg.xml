@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<schemas xmlns='http://xml.netbeans.org/schema/JAXBWizConfig' destdir='build/generated-sources/jaxb' projectName='AD_20191127_Examen_2018_Distancia' version='1.0'>
+	<schema type='-xmlschema' package='jaxb.biblioteca' name='BindingBiblioteca'>
+		<xjc-options>
+		</xjc-options>
+		<schema-sources>
+			<schema-source location='xml-resources/jaxb/BindingBiblioteca/biblioteca.xsd' origLocation='biblioteca.xsd'/>
+		</schema-sources>
+		<bindings>
+		</bindings>
+		<catalog/>
+	</schema>
+</schemas>
