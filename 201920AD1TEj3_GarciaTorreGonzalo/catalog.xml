@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/Users/gonza/Documents/ProyectosNetBeans/DAM2_AD/201920AD1TEj2_GarciaTorreGonzalo2/chatUsuarios.xsd" uri="xml-resources/jaxb/BindingChat/chatUsuarios.xsd"/>
+</catalog>

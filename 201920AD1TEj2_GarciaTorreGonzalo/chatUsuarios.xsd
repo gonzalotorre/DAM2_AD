@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 sp1 (http://www.altova.com) by End User (free.org) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="quickChat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="usuarios">
+					<xs:complexType>
+						<xs:sequence minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="usuario">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nombre" type="xs:string"/>
+										<xs:element name="numeroTelefono" type="xs:string"/>
+										<xs:element name="mensajeEnviados">
+											<xs:complexType>
+												<xs:sequence minOccurs="0" maxOccurs="unbounded">
+													<xs:element name="mensaje" type="mensajeType"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="chats">
+					<xs:complexType>
+						<xs:sequence minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="chat">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="uniqueID" type="xs:string"/>
+										<xs:element name="titulo" type="xs:string"/>
+										<xs:element name="ultimoMensaje" type="mensajeType"/>
+										<xs:element name="fechaCreacion" type="xs:date"/>
+										<xs:element name="mensajes">
+											<xs:complexType>
+												<xs:sequence minOccurs="0" maxOccurs="unbounded">
+													<xs:element name="mensaje" type="mensajeType"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="mensajesArchivados">
+											<xs:complexType>
+												<xs:sequence minOccurs="0" maxOccurs="unbounded">
+													<xs:element name="mensaje" type="mensajeType"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="mensajeType">
+		<xs:sequence>
+			<xs:element name="mensajeID"/>
+			<xs:element name="nombreUsuario" type="xs:string"/>
+			<xs:element name="textoMensaje" type="xs:string"/>
+			<xs:element name="fechaPublicacion" type="xs:date"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,16 @@
+{
+	"usuario":	{
+		"nombre":"String",
+		"numeroTelefono":"String",
+		"mensajeEnviados":	{
+			"mensaje":	[
+				{
+					"mensajeID":"text",
+					"nombreUsuario":"String",
+					"textoMensaje":"String",
+					"fechaPublicacion":"1967-08-13"
+				}
+			]
+		}
+	}
+}
