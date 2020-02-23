@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12-feb-2020 11:22:21 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Pinturas.Comentarios" table="Comentarios" catalog="Pinturas" optimistic-lock="version">
+        <id name="idcomentarios" type="string">
+            <column name="idcomentarios" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="cuadro" class="Pinturas.Cuadro" fetch="select">
+            <column name="Cuadro_idCuadro" length="20" not-null="true" />
+        </many-to-one>
+        <many-to-one name="usuarios" class="Pinturas.Usuarios" fetch="select">
+            <column name="Usuarios_idUsuario" length="20" not-null="true" />
+        </many-to-one>
+        <property name="comentario" type="string">
+            <column name="comentario" length="45" />
+        </property>
+        <property name="fecha" type="date">
+            <column name="fecha" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

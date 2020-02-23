@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-feb-2020 11:18:56 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="RelacionesUnoAUno" name="Modelo.Direccion" optimistic-lock="version" table="Direccion">
+    <id name="idDireccion" type="int">
+      <column name="idDireccion"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="calle" type="string">
+      <column length="45" name="Calle"/>
+    </property>
+    <property name="codigoPostal" type="java.lang.Integer">
+      <column name="CodigoPostal"/>
+    </property>
+  </class>
+</hibernate-mapping>

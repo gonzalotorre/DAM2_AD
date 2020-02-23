@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-feb-2020 11:18:56 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class catalog="RelacionesUnoAUno" name="Modelo.Persona" optimistic-lock="version" table="Persona">
+        <id name="idPersona" type="int">
+            <column name="idPersona"/>
+            <generator class="assigned"/>
+        </id>
+        <!--<one-to-one name="direccion" class="Mapeos.Persona" cascade="persist, delete">
+            <column name="Direccion_idDireccion" precision="22" scale="0"/>
+        </one-to-one> -->
+        <one-to-one cascade="persist, delete" name="direccion"/>
+        <property name="nombre" type="string">
+            <column length="20" name="Nombre"/>
+        </property>
+    </class>
+</hibernate-mapping>

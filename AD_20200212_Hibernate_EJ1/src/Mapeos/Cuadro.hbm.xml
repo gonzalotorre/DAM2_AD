@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12-feb-2020 11:22:21 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Pinturas.Cuadro" table="Cuadro" catalog="Pinturas" optimistic-lock="version">
+        <id name="idCuadro" type="string">
+            <column name="idCuadro" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="pintor" class="Pinturas.Pintor" fetch="select">
+            <column name="Pintor_idPintor" length="20" not-null="true" />
+        </many-to-one>
+        <property name="titulo" type="string">
+            <column name="titulo" length="45" />
+        </property>
+        <property name="anio" type="java.lang.Integer">
+            <column name="anio" />
+        </property>
+        <set name="comentarioses" table="Comentarios" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Cuadro_idCuadro" length="20" not-null="true" />
+            </key>
+            <one-to-many class="Pinturas.Comentarios" />
+        </set>
+    </class>
+</hibernate-mapping>
